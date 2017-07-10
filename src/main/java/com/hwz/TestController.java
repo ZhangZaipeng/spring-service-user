@@ -19,7 +19,7 @@ public class TestController {
     String applicationName;
 
     @RequestMapping("/hi")
-    public String home(@RequestParam String name) {
-        return "hi i am is:" + name + ",i am from port:" +port;
+    public String home() {
+        return "hi i am is:" + applicationName + ",i am from port:" +port;
     }
 }
