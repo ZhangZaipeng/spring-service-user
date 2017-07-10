@@ -18,8 +18,17 @@ public class TestController {
     @Value("${spring.application.name}")
     String applicationName;
 
+    @Value("${foo}")
+    String foo;
+
     @RequestMapping("/hi")
     public String home() {
         return "hi i am is:" + applicationName + ",i am from port:" +port;
     }
+
+    @RequestMapping("/foo")
+    public String foo() {
+        return foo;
+    }
+
 }
